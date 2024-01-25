@@ -3,19 +3,445 @@
 #include <windows.h>
 using namespace std;
 
+//Print stats function
+void printstats(string name, int k, int c) {
+    string knowledge = "Knowledge: " + to_string(k) + "/100 \n";
+    string charisma = "Charisma: " + to_string(c) + "/100 \n";
+    cout << name + "'s stats: \n";
+    cout << knowledge;
+    cout << charisma;
+    cout << "\n";
+    Sleep(5000);
+}
+
+//Mock exams & endings
+void mock(string name, string p1, string p2, string p3, int k, int c) {
+    //p1 = he
+    //p2 = himself
+    //p3 = his
+
+    string temp;
+
+    printstats(name, k, c);
+
+    int result;
+
+    if (k >= 90) {
+        result = 44;
+    }
+    else if (k >= 80) {
+        result = 42;
+    }
+    else if (k >= 50) {
+        result = 36;
+    }
+    else if (k >= 30) {
+        result = 30;
+    }
+    else if ((k <= 30) && (c >= 80)) {
+        //Charisma ending
+    }
+    else if ((k > 30) && (c >= 80)) {
+        //Chrisma and good ending
+    }
+    else {
+        result = 20;
+    }
+
+    switch (result) {
+        case 44:
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks! \n";
+            Sleep(2000);
+            cout << "This result pushed " + name + " to work harder and " + name + " achieved a 45 on his final IB Exams. \n" << endl;
+            Sleep(5000);
+            cout << "One year later... \n" << endl;
+            Sleep(3000);
+            cout << name + " is having a great time studying Computer Engineering at MIT. \n";
+            Sleep(2000);
+            cout << "However, " + name + " literally gets 0 bitches because " + p1 + " has no Charisma. \n" << endl;
+            Sleep(5000);
+            cout << "5 years later... \n" << endl;
+            Sleep(3000);
+            cout << name + " has graduated with a masters degree in Computer Engineering. \n";
+            Sleep(3000);
+            cout << name + " falls into deep depression because " + p1 + " is very lonely. \n";
+            Sleep(3000);
+            cout << name + " commits suicide. \n" << endl;
+            Sleep(5000);
+            cout << "Game over. \n" << endl;
+            Sleep(3000);
+            cout << "Type any letter to close the app. \n";
+            cin >> temp;
+            break;
+        case 42:
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks!";
+            //Good ending func
+            break;
+        case 36:
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks.";
+            //Mid ending func
+            break;
+        case 30:
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks.";
+            //Bad ending func
+            break;
+        case 20:
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks.";
+            //Worst ending func
+            break;
+    }
+}
+
+//Meet boy/girl
+void side_rizzler(string name, string p1, string p2, string p3, int k, int c) {
+    //p1 = he
+    //p2 = himself
+    //p3 = his
+    string temp;
+    string girlname = "Jenny";
+    string boyname = "Steven";
+    bool flag = true;
+    printstats(name, k, c);
+    
+    //Boy / Other scenario
+    if ((p1 == "he") || (p1 == "they")) {
+        cout << "While in school, " + name + " sees a girl that " + p1 + " finds very attractive. \n" << endl;
+        Sleep(3000);
+        while (flag) {
+            if (c <= 10) {
+                flag = false;
+                cout << "THE GIRL REFUSES TO EVEN LOOK AT YOU BECAUSE YOUR CHARISMA IS TOO LOW. \n";
+                Sleep(6000);
+                cout << "Knowledge +0. Charisma -10. \n" << endl;
+                c = c - 10;
+                if (c < 0) {
+                    c = 0;
+                }
+                mock(name, p1, p2, p3, k, c);
+                break;
+            }
+            cout << "What does " + name + " do? \n";
+            cout << 
+            "1. Approach the girl and ask her what her name is. \n" << 
+            "2. Leave without talking to her. \n" << 
+            "3. Stand there and STARE at her. \n";
+            cin >> temp;
+            if ((temp == "1") || (temp == "1.")) {
+                flag = false;
+                cout << "\n";
+                bool flag2 = true;
+                cout << name + " approaches the girl. \n";
+                Sleep(2000);
+                cout << name + ": Hey, how are you doing? \n";
+                Sleep(2000);
+                cout << "Girl: Good, thanks. Who are you? \n";
+                Sleep(2000);
+                cout << name + ": My name is " + name + ", nice to meet you. What's your name? \n";
+                Sleep(2000);
+                cout << "Girl: " + girlname + ". \n";
+                Sleep(2000);
+                cout << name + ": \n";
+                cout << 
+                "1. Hi " + girlname + ", I was over there and your beauty caught my eyes. Do you have a boyfriend? \n" <<
+                "2. You look very cute today, " + girlname + ". \n" <<
+                "3. I want to fuck you. \n";
+                cin >> temp;
+                while (flag2) {
+                    if ((temp == "1") || (temp == "1.")) {
+                        flag2 = false;
+                        cout << "\n";
+                        cout << girlname + ": Aww, thank you! I don't have a boyfriend. \n";
+                        Sleep(2000);
+                        cout << name + ": Could I get your WeChat then? \n";
+                        Sleep(2000);
+                        cout << girlname + ": No problem. Here! \n" << endl;
+                        Sleep(2000);
+
+                        cout << "You successfully got the girl's WeChat. \n";
+                        Sleep(2000);
+                        cout << "Charisma +30. \n" << endl;
+                        Sleep(2000);
+                        c = c + 30;
+                        if (c > 100) {
+                            c = 100;
+                        }
+                        mock(name, p1, p2, p3, k, c);
+                    }
+                    else if ((temp == "2") || (temp == "2.")) {
+                        flag2 = false;
+                        cout << "\n";
+                        cout << girlname + ": I don't really like it when people call me cute, but thanks. \n";
+                        Sleep(2000);
+                        cout << name + ": Could I get your WeChat? \n";
+                        Sleep(2000);
+                        cout << girlname + ": No, sorry, I have a boyfriend. \n" << endl;
+                        Sleep(2000);
+
+                        cout << "You did not get the girl's WeChat. \n";
+                        Sleep(2000);
+                        cout << "Charisma +10. \n" << endl;
+                        Sleep(2000);
+                        c = c + 10;
+                        mock(name, p1, p2, p3, k, c);
+                    }
+                    else if ((temp == "3") || (temp == "3.")) {
+                        flag2 = false;
+                        cout << "\n";
+                        cout << girlname + ": What the fuck? Are you fucking stupid? Fuck no, get away from me! \n" << endl;
+                        Sleep(2000);
+
+                        cout << "Charisma -100000000000. \n" << endl;
+                        Sleep(2000);
+                        c = c - 100;
+                        if (c < 0) {
+                            c = 0;
+                        }
+                        mock(name, p1, p2, p3, k, c);
+                    }
+                    else {
+                        cout << "\n" << "Choose from the choices given please. (i.e. 1) \n" << endl;
+                        Sleep(2000);
+                    }
+                }
+            }
+            else if ((temp == "2") || (temp == "2.")) {
+                flag = false;
+                cout << "\n";
+                cout << "Charisma: +0. \n" << endl;
+                Sleep(2000);
+                mock(name, p1, p2, p3, k, c);
+            }
+            else if ((temp == "3") || (temp == "3.")) {
+                flag = false;
+                cout << "\n";
+                cout << "The girl looks at you, walks over to you, and tells you to fuck off. \n";
+                Sleep(2000);
+                cout << "Charisma -100000000000. \n" << endl;
+                Sleep(2000);
+                c = c - 100;
+                if (c < 0) {
+                    c = 0;
+                }
+                mock(name, p1, p2, p3, k, c);
+            }
+            else {
+                cout << "\n" << "Choose from the choices given please. (i.e. 1) \n" << endl;
+                Sleep(2000);
+            }
+        }
+    }
+    //Girl scenario
+    else if (p1 == "she") {
+        cout << "While in school, " + name + " sees a boy that " + p1 + " finds very attractive. \n" << endl;
+        Sleep(3000);
+        while (flag) {
+            if (c <= 10) {
+                flag = false;
+                cout << "THE GIRL REFUSES TO EVEN LOOK AT YOU BECAUSE YOUR CHARISMA IS TOO LOW. \n";
+                Sleep(6000);
+                cout << "Knowledge +0. Charisma -10. \n" << endl;
+                c = c - 10;
+                if (c < 0) {
+                    c = 0;
+                }
+                mock(name, p1, p2, p3, k, c);
+                break;
+            }
+            cout << "What does " + name + " do? \n";
+            cout << 
+            "1. Approach the boy and ask him what his name is. \n" << 
+            "2. Leave without talking to him. \n" <<
+            "3. Stand there and STARE at him. \n";
+            cin >> temp;
+            if ((temp == "1") || (temp == "1.")) {
+                flag = false;
+                cout << "\n";
+                bool flag2 = true;
+                cout << name + " approaches the boy. \n";
+                Sleep(2000);
+                cout << name + ": Hey, how are you doing? \n";
+                Sleep(2000);
+                cout << "Boy: Good, thanks. Who are you? \n";
+                Sleep(2000);
+                cout << name + ": My name is " + name + ", nice to meet you. What's your name? \n";
+                Sleep(2000);
+                cout << "Boy: " + boyname + ". \n";
+                Sleep(2000);
+                cout << name + ": \n";
+                cout << 
+                "1. Hi " + boyname + ", I was over there and your handsomeness caught my eyes. Do you have a girlfriend? \n" <<
+                "2. You look very beautiful today, " + boyname + ". \n" <<
+                "3. I want to fuck you. \n";
+                cin >> temp;
+                while (flag2) {
+                    if ((temp == "1") || (temp == "1.")) {
+                        flag2 = false;
+                        cout << "\n";
+                        cout << boyname + ": Aww, thank you! I don't have a girlfriend. \n";
+                        Sleep(2000);
+                        cout << name + ": Could I get your WeChat then? \n";
+                        Sleep(2000);
+                        cout << boyname + ": No problem. Here! \n" << endl;
+                        Sleep(2000);
+
+                        cout << "You successfully got the boy's WeChat. \n";
+                        Sleep(2000);
+                        cout << "Charisma +30. \n" << endl;
+                        Sleep(2000);
+                        c = c + 30;
+                        if (c > 100) {
+                            c = 100;
+                        }
+                        mock(name, p1, p2, p3, k, c);
+                    }
+                    else if ((temp == "2") || (temp == "2.")) {
+                        flag2 = false;
+                        cout << "\n";
+                        cout << boyname + ": I don't really like it when people call me beautiful, but thanks. \n";
+                        Sleep(2000);
+                        cout << name + ": Could I get your WeChat? \n";
+                        Sleep(2000);
+                        cout << boyname + ": No, sorry, I have a girlfriend. \n" << endl;
+                        Sleep(2000);
+
+                        cout << "You did not get the boy's WeChat. \n";
+                        Sleep(2000);
+                        cout << "Charisma +10. \n" << endl;
+                        Sleep(2000);
+                        c = c + 10;
+                        mock(name, p1, p2, p3, k, c);
+                    }
+                    else if ((temp == "3") || (temp == "3.")) {
+                        flag2 = false;
+                        cout << "\n";
+                        cout << boyname + ": What the fuck? Are you fucking stupid? Fuck no, get away from me! \n" << endl;
+                        Sleep(2000);
+
+                        cout << "Charisma -100000000000. \n" << endl;
+                        Sleep(2000);
+                        c = c - 100;
+                        if (c < 0) {
+                            c = 0;
+                        }
+                        mock(name, p1, p2, p3, k, c);
+                    }
+                    else {
+                        cout << "\n" << "Choose from the choices given please. (i.e. 1) \n" << endl;
+                        Sleep(2000);
+                    }
+                }
+            }
+            else if ((temp == "2") || (temp == "2.")) {
+                flag = false;
+                cout << "\n";
+                cout << "Charisma: +0. \n" << endl;
+                Sleep(2000);
+                mock(name, p1, p2, p3, k, c);
+            }
+            else if ((temp == "3") || (temp == "3.")) {
+                flag = false;
+                cout << "\n";
+                cout << "The boy looks at you, walks over to you, and tells you to fuck off. \n";
+                Sleep(2000);
+                cout << "Charisma -100000000000. \n" << endl;
+                Sleep(2000);
+                c = c - 100;
+                if (c < 0) {
+                    c = 0;
+                }
+                mock(name, p1, p2, p3, k, c);
+            }
+            else {
+                cout << "\n" << "Choose from the choices given please. (i.e. 1) \n" << endl;
+                Sleep(2000);
+            }
+        }
+    }
+}
+
 //Story 1-1
-void choice1_1(string name, string p1, string p2, string p3) {
-    cout << "";
+void choice1_1(string name, string p1, string p2, string p3, int k, int c) {
+    //p1 = he
+    //p2 = himself
+    //p3 = his
+    int temp;
+    bool flag = true;
+
+    //Print stats
+    printstats(name, k, c);
+
+    while (flag) {
+        cout << "On a scale of 1 - 10, how hard does " + name + " study for his mocks? \n";
+        cin >> temp;
+        if (temp == 10) {
+            flag = false;
+            cout << "\n";
+            cout << "Due to sleeping too little, " + name + " died of a heart failure while looking at Physics Past Papers.";
+            Sleep(2000);
+            cout << "Game over. \n";
+            Sleep(2000);
+            cout << "Type any letter to exit app. \n";
+            cin >> temp;
+        }
+        else if (7 <= temp <= 9) {
+            flag = false;
+            cout << "\n";
+            cout << name + " studied very hard and improved " + p3 + " knowledge a lot. \n" << endl;
+            Sleep(2000);
+            cout << "Knowledge: +40. Charisma: -40. \n" << endl;
+            Sleep(2000);
+            k = k + 40;
+            c = c - 40;
+            side_rizzler(name, p1, p2, p3, k, c);
+        }
+        else if (4 <= temp <= 6) {
+            flag = false;
+            cout << "\n";
+            cout << name + " studied decently for " + p3 + " exam and improved " + p3 + " knowledge a normal amount. \n" << endl;
+            Sleep(2000);
+            cout << "Knowledge: +30. Charisma: -20";
+            Sleep(2000);
+            k = k + 30;
+            c = c - 20;
+            side_rizzler(name, p1, p2, p3, k, c);
+        }
+        else if (2 <= temp <= 3) {
+            flag = false;
+            cout << "\n";
+            cout << name + " studied a small amount for " + p3 + " exam. Only a small amount of knowledge is improved. \n" << endl;
+            Sleep(2000);
+            cout << "Knowledge: +10. Charisma: -10";
+            Sleep(2000);
+            k = k + 10;
+            c = c - 10;
+            side_rizzler(name, p1, p2, p3, k, c);
+        }
+        else if (temp == 1) {
+            cout << "\n";
+            cout << name + " studied too little. Knowledge did not improve. \n" << endl;
+            Sleep(2000);
+            cout << "Knowledge: +0. Charisma: +0";
+            Sleep(2000);
+            side_rizzler(name, p1, p2, p3, k, c);
+        }
+        else {
+            cout << "Please choose a number between 1 and 10.";
+            Sleep(1000);
+        }
+    }
 }
 
 //Story 1-2
-void choice1_2(string name, string p1, string p2, string p3) {
+void choice1_2(string name, string p1, string p2, string p3, int k, int c) {
     //p1 = he
     //p2 = himself
     //p3 = his
     string temp;
     bool flag = true;
-    
+
+    //Print stats
+    printstats(name, k, c);
+
     cout << name + " plays videogames all two weeks. \n";
     Sleep(2000);
     cout << "It is now the last day before the exams and " + name + " feels a lot of pressure. \n";
@@ -30,10 +456,18 @@ void choice1_2(string name, string p1, string p2, string p3) {
         if ((temp == "1") || (temp == "1.")) {
             flag = false;
             cout << "\n";
+            cout << "Knowledge: +20. Charisma: +0. \n";
+            Sleep(2000);
+            k = k + 20;
+            side_rizzler(name, p1, p2, p3, k, c);
         }
         else if ((temp == "2") || (temp == "2.")) {
             flag = false;
             cout << "\n";
+            cout << "Knowledge: +0. Charisma: +10. \n";
+            Sleep(2000);
+            c = c + 10;
+            side_rizzler(name, p1, p2, p3, k, c);
         }
         else if ((temp == "3") || (temp == "3.")) {
             flag = false;
@@ -42,7 +476,7 @@ void choice1_2(string name, string p1, string p2, string p3) {
             Sleep(2000);
             cout << "Game over. \n";
             Sleep(2000);
-            cout << "Type any letter to exit app.";
+            cout << "Type any letter to exit app. \n";
             cin >> temp;
         }
         else {
@@ -52,17 +486,13 @@ void choice1_2(string name, string p1, string p2, string p3) {
     }
 }
 
-//Story 1-3
-void choice1_3(string name, string p1, string p2, string p3) {
-    cout << "";
-}
-
 //Choice 1: IB Adventure
 void choice1(string name, string p1, string p2, string p3) {
     //p1 = he
     //p2 = himself
     //p3 = his
-
+    int knowledgenum = 50;
+    int charismanum = 50;
     string temp;
     bool flag = true;
     
@@ -72,6 +502,10 @@ void choice1(string name, string p1, string p2, string p3) {
     Sleep(2000);
     cout << name + " isn't the best student in their class, but " + name + " tries " + p3 + " best. \n" << endl;
     Sleep(2000);
+
+    //Print stats
+    printstats(name, knowledgenum, charismanum);
+
     while (flag) {
         cout << "The mock exams are starting in a week from now. What does " + name + " do? \n";
         cout << 
@@ -82,17 +516,72 @@ void choice1(string name, string p1, string p2, string p3) {
         if ((temp == "1") || (temp == "1.")) {
             flag = false;
             cout << "\n";
-            choice1_1(name, p1, p2, p3);
+            choice1_1(name, p1, p2, p3, knowledgenum, charismanum);
         }
         else if ((temp == "2") || (temp == "2.")) {
             flag = false;
             cout << "\n";
-            choice1_2(name, p1, p2, p3);
+            cout << "Knowledge: -50. Charisma: +20 \n";
+            Sleep(2000);
+            knowledgenum = knowledgenum - 50;
+            charismanum = charismanum + 20;
+            choice1_2(name, p1, p2, p3, knowledgenum, charismanum);
         }
         else if ((temp == "3") || (temp == "3.")) {
             flag = false;
-            cout << "\n";
-            choice1_3(name, p1, p2, p3);
+            bool flag2 = true;
+            cout << "\n" << endl;
+            while (flag2) {
+                cout << "The next week arrives. Does " + name + " actually start studying? \n";
+                cout << "Y (Yes) or N (No) \n";
+                cin >> temp;
+                if ((temp == "Y") || (temp == "y")) {
+                    flag2 = false;
+                    cout << "\n" << endl;
+                    cout << "Knowledge: +10. Charisma: -20 \n" << endl;
+                    Sleep(2000);
+                    knowledgenum = knowledgenum + 10;
+                    charismanum = charismanum - 20;
+                    side_rizzler(name, p1, p2, p3, knowledgenum, charismanum);
+                }
+                else if ((temp == "N") || (temp == "n")) {
+                    flag2 = false;
+                    bool flag3 = true;
+                    cout << "Knowledge: -30. Charisma: +10; \n" << endl;
+                    Sleep(2000);
+                    knowledgenum = knowledgenum - 30;
+                    charismanum = charismanum + 10;
+                    cout << "It is the last day before the mock exams, does " + name + " study a little bit? \n";
+                    cout << "Y (Yes) or N (No) \n";
+                    cin >> temp;
+                    while (flag3) {
+                        if ((temp == "Y") || (temp == "y")) {
+                            flag3 = false;
+                            cout << "\n";
+                            cout << "Knowledge: +10. Charisma: +0 \n" << endl;
+                            Sleep(2000);
+                            knowledgenum = knowledgenum + 10;
+                            side_rizzler(name, p1, p2, p3, knowledgenum, charismanum);
+                        }
+                        else if ((temp == "N") || (temp == "n")) {
+                            flag3 = false;
+                            cout << "Knowledge: -10. Charisma: +10; \n" << endl;
+                            Sleep(2000);
+                            knowledgenum = knowledgenum - 10;
+                            charismanum = charismanum + 10;
+                            side_rizzler(name, p1, p2, p3, knowledgenum, charismanum);
+                        }
+                        else {
+                            cout << "\n" << "Choose from the choices given please. (i.e. Y) \n" << endl;
+                            Sleep(1000);
+                        }
+                    }
+                }
+                else {
+                    cout << "\n" << "Choose from the choices given please. (i.e. Y) \n" << endl;
+                    Sleep(1000);
+                }
+            }
         }
         else {
             cout << "\n" << "Choose from the choices given please. (i.e. 1) \n" << endl;
