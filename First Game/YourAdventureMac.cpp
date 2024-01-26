@@ -804,4 +804,5 @@ int main() {
     }
     cout << "\n";
     start(cname, temp, pronoun, pronoun2, pronoun3);
+    return 0;
 }
