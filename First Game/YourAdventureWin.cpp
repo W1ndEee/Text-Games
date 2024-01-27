@@ -39,10 +39,65 @@ void mock(string name, string p1, string p2, string p3, int k, int c) {
         result = 30;
     }
     else if ((k <= 30) && (c >= 80)) {
+        //4 routes
         //Charisma ending
+        if ((p1 == "he") || (p1 == "they")) {
+            cout << name + " got a 21 on " + p3 + " mock exams. It didn't bother " + name + " too much. \n";
+            Sleep(3000);
+            cout << name + " got together with Jenny. \n";
+            Sleep(3000);
+            cout << name + " and Jenny started having sex 4 times every month and eventually got married. \n";
+            Sleep(3000);
+            cout << name + " and Jenny had a baby. It was a boy. " + name + " and Jenny named him \"Alex\". They lived happily ever after. \n";
+            Sleep(5000);
+            cout << "Charisma ending achieved. \n" << endl;
+            Sleep(3000);
+            cout << "Type any letter to close the app. \n";
+            cin >> temp;
+        } 
+        else if (p1 == "she") {
+            cout << name + " got a 21 on " + p3 + " mock exams. It didn't bother " + name + " too much. \n";
+            Sleep(3000);
+            cout << name + " got together with Steven. \n";
+            Sleep(3000);
+            cout << name + " and Steven started having sex 4 times every month and eventually got married. \n";
+            Sleep(3000);
+            cout << name + " and Steven had a baby. It was a boy. " + name + " and Steven named him \"Alex\". They lived happily ever after. \n" << endl;
+            Sleep(5000);
+            cout << "Charisma ending achieved. \n" << endl;
+            Sleep(3000);
+            cout << "Type any letter to close the app. \n";
+            cin >> temp;
+        }
     }
-    else if ((k > 30) && (c >= 80)) {
+    else if ((k >= 40) && (c >= 80)) {
+        //I don't think this is possible but fuck it.
+        //Nevermind. It is possible.
+        //Possible but improbable, only one route to this ending. Rarest ending.
+        //1 route
         //Chrisma and good ending
+        if ((p1 == "he") || (p1 == "they")) {
+            cout << name + " got a 34 on " + p3 + " mock exams. It didn't bother " + name + " too much. \n";
+            Sleep(3000);
+            cout << name + " worked a little bit and managed to get a 36 on " + p3 + " final IB exam.";
+            Sleep(5000);
+            cout << "One year later... \n" << endl;
+            Sleep(3000);
+            cout << name + " went to Canada to study Computer Engineering with " + p3 + " new boyfriend, Steven. \n";
+            Sleep(3000);
+            cout << "3 years later... \n" << endl;
+            Sleep(3000);
+            cout << name + " eventually graduated and started working at Google as a Computing Specialist. \n";
+            Sleep(3000);
+            cout << name + " and Steven got married and had a baby. The baby was a boy and they named him \"Alex\". \n";
+            Sleep(3000);
+            cout << name + " and Steven continued to live a very happy life. \n" << endl;
+            Sleep(5000);
+            cout << "Best ending achieved! Congratulations! \n" << endl;
+            Sleep(3000);
+            cout << "Type any letter to close the app. \n";
+            cin >> temp;
+        }
     }
     else {
         result = 20;
@@ -50,9 +105,10 @@ void mock(string name, string p1, string p2, string p3, int k, int c) {
 
     switch (result) {
         case 44:
+            //1 route
             cout << name + " got a " + to_string(result) + " on " + p3 + " mocks! \n";
             Sleep(2000);
-            cout << "This result pushed " + name + " to work harder and " + name + " achieved a 45 on his final IB Exams. \n" << endl;
+            cout << "This result pushed " + name + " to work harder and " + name + " achieved a 45 on " + p3 + " final IB Exams. \n" << endl;
             Sleep(5000);
             cout << "One year later... \n" << endl;
             Sleep(3000);
@@ -74,20 +130,101 @@ void mock(string name, string p1, string p2, string p3, int k, int c) {
             cin >> temp;
             break;
         case 42:
-            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks!";
-            //Good ending func
+            //1 route
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks! \n";
+            Sleep(2000);
+            cout << "This result pushed " + name + " to work harder and " + name + " achieved a 40 on " + p3 + " final IB Exams. \n" << endl;
+            Sleep(5000);
+            cout << "One year later... \n" << endl;
+            Sleep(3000);
+            cout << name + " is having a great time studying Computer Engineering in Canada. \n" << endl;
+            Sleep(5000);
+            cout << "5 years later... \n" << endl;
+            Sleep(3000);
+            cout << name + " graduated with a masters degree in Computer Engineering. \n";
+            Sleep(3000);
+            cout << name + " is alone for the rest of " + p3 + " life but is very successful in Computer Engineering and makes a lot of money. \n" << endl;
+            Sleep(5000);
+            cout << "Good ending achieved. \n" << endl;
+            Sleep(3000);
+            cout << "Type any letter to close the app. \n";
+            cin >> temp;
             break;
         case 36:
-            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks.";
+            //3 Routes
             //Mid ending func
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks. \n";
+            Sleep(2000);
+            cout << name + " didn't study too hard before the final exams and " + name + " achieved a 34 on " + p3 + " final IB Exams. \n" << endl;
+            Sleep(5000);
+            cout << "One year later... \n" << endl;
+            Sleep(3000);
+            cout << name + " is studying Computer Engineering in Australia. \n" << endl;
+            Sleep(5000);
+            cout << "5 years later... \n" << endl;
+            Sleep(3000);
+            cout << name + " graduated with a Bachelors Degree in Computer Engineering. \n";
+            Sleep(3000);
+            cout << name + " works at a small tech company in Australia and makes enough money to sustain " + p3 + " life. \n";
+            Sleep(3000);
+            cout << name + " also found a girlfriend at the company " + p1 + " is working at. " + name + " is pretty happy with " + p3 + " life. \n" << endl;
+            Sleep(5000);
+            cout << "Mid ending achieved. \n" << endl;
+            Sleep(3000);
+            cout << "Type any letter to close the app. \n";
+            cin >> temp;
             break;
         case 30:
-            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks.";
+            //1 route
             //Bad ending func
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks. \n";
+            Sleep(2000);
+            cout << name + " barely studied for " + p3 + " final exams and got a 29 on " + p3 + " final IB exams. \n" << endl;
+            Sleep(5000);
+            cout << "One year later... \n" << endl;
+            Sleep(3000);
+            cout << name + " is studying Computer Engineering in a University in India. It was the only University gave " + p3 + " an offer. \n" << endl;
+            Sleep(5000);
+            cout << "5 years later... \n" << endl;
+            Sleep(3000);
+            cout << name + " failed to graduate from the Univeristy because of low grades. \n";
+            Sleep(3000);
+            cout << name + " now works in a tiny company as a scammer. \n";
+            Sleep(3000);
+            cout << name + " often goes to the strip club and found a stripper to be " + p3 + " lover. \n" << endl;
+            Sleep(5000);
+            cout << "Bad ending achieved \n" << endl;
+            Sleep(3000);
+            cout << "Type any letter to close the app. \n";
+            cin >> temp;
             break;
         case 20:
-            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks.";
+            //3 routes
             //Worst ending func
+            cout << name + " got a " + to_string(result) + " on " + p3 + " mocks. \n";
+            Sleep(2000);
+            cout << name + " completely failed " + p3 + " final IB exam and got a 15. \n" << endl;
+            Sleep(5000);
+            cout << "One year later... \n" << endl;
+            Sleep(3000);
+            cout << name + " couldn't find a University to go to. So " + name + " became a hooker to make money. \n" << endl;
+            Sleep(5000);
+            cout << "2 year later... \n" << endl;
+            Sleep(3000);
+            cout << name + " got a hooker to be " + p3 + " lover. The two wanted to get married. \n" << endl;
+            Sleep(5000);
+            cout << "1 year later... \n" << endl;
+            Sleep(3000);
+            cout << name + " and " + p3 + " lover want to get married. \n";
+            Sleep(2000);
+            cout << "However, the day before their marriage, " + name + " gets diagnosed with HIV and " + name + "'s lover dumps " + name + "\n";
+            Sleep(4000);
+            cout << name + " gets depression and lives the rest of " + p3 + " life depressed. \n" << endl;
+            Sleep(5000);
+            cout << "Worst ending achieved \n" << endl;
+            Sleep(3000);
+            cout << "Type any letter to close the app. \n";
+            cin >> temp;
             break;
     }
 }
@@ -371,12 +508,12 @@ void choice1_1(string name, string p1, string p2, string p3, int k, int c) {
     printstats(name, k, c);
 
     while (flag) {
-        cout << "On a scale of 1 - 10, how hard does " + name + " study for his mocks? \n";
+        cout << "On a scale of 1 - 10, how hard does " + name + " study for " + p3 + " mocks? \n";
         cin >> temp;
         if (temp == 10) {
             flag = false;
             cout << "\n";
-            cout << "Due to sleeping too little, " + name + " died of a heart failure while looking at Physics Past Papers.";
+            cout << "Due to sleeping too little, " + name + " died of a heart failure while looking at Physics Past Papers. \n" << endl;
             Sleep(2000);
             cout << "Game over. \n";
             Sleep(2000);
@@ -398,7 +535,7 @@ void choice1_1(string name, string p1, string p2, string p3, int k, int c) {
             flag = false;
             cout << "\n";
             cout << name + " studied decently for " + p3 + " exam and improved " + p3 + " knowledge a normal amount. \n" << endl;
-            Sleep(2000);
+            Sleep(200000);
             cout << "Knowledge: +30. Charisma: -20";
             Sleep(2000);
             k = k + 30;
@@ -409,23 +546,24 @@ void choice1_1(string name, string p1, string p2, string p3, int k, int c) {
             flag = false;
             cout << "\n";
             cout << name + " studied a small amount for " + p3 + " exam. Only a small amount of knowledge is improved. \n" << endl;
-            Sleep(2000);
+            Sleep(200000);
             cout << "Knowledge: +10. Charisma: -10";
             Sleep(2000);
             k = k + 10;
             c = c - 10;
             side_rizzler(name, p1, p2, p3, k, c);
         }
+        //Only route to best ending only if +30 in rizzler mission
         else if (temp == 1) {
             cout << "\n";
             cout << name + " studied too little. Knowledge did not improve. \n" << endl;
-            Sleep(2000);
+            Sleep(200000);
             cout << "Knowledge: +0. Charisma: +0";
             Sleep(2000);
             side_rizzler(name, p1, p2, p3, k, c);
         }
         else {
-            cout << "Please choose a number between 1 and 10.";
+            cout << "Please choose a number between 1 and 10. \n";
             Sleep(1000);
         }
     }
@@ -472,10 +610,10 @@ void choice1_2(string name, string p1, string p2, string p3, int k, int c) {
         else if ((temp == "3") || (temp == "3.")) {
             flag = false;
             cout << "\n";
-            cout << name + " chooses to end " + p2 + ". \n";
+            cout << name + " chooses to end " + p2 + ". \n" << endl;
             Sleep(2000);
-            cout << "Game over. \n";
-            Sleep(2000);
+            cout << "Game over. \n" << endl;
+            Sleep(3000);
             cout << "Type any letter to exit app. \n";
             cin >> temp;
         }
@@ -521,7 +659,7 @@ void choice1(string name, string p1, string p2, string p3) {
         else if ((temp == "2") || (temp == "2.")) {
             flag = false;
             cout << "\n";
-            cout << "Knowledge: -50. Charisma: +20 \n";
+            cout << "Knowledge: -50. Charisma: +20 \n" << endl;
             Sleep(2000);
             knowledgenum = knowledgenum - 50;
             charismanum = charismanum + 20;
@@ -538,9 +676,9 @@ void choice1(string name, string p1, string p2, string p3) {
                 if ((temp == "Y") || (temp == "y")) {
                     flag2 = false;
                     cout << "\n" << endl;
-                    cout << "Knowledge: +10. Charisma: -20 \n" << endl;
+                    cout << "Knowledge: +20. Charisma: -20 \n" << endl;
                     Sleep(2000);
-                    knowledgenum = knowledgenum + 10;
+                    knowledgenum = knowledgenum + 20;
                     charismanum = charismanum - 20;
                     side_rizzler(name, p1, p2, p3, knowledgenum, charismanum);
                 }
@@ -595,7 +733,7 @@ void start(string name, string temp, string p1, string p2, string p3) {
     bool flag = true;
     string choice = temp;
 
-    cout << "Welcome, " + name << endl;
+    cout << "Welcome, " + name + "\n" << endl;
     Sleep(1000);
 
     while (flag) {
@@ -634,8 +772,10 @@ int main() {
     cin >> temp;
     cout << "Don't care, didn't ask. \n";
     Sleep(1000);
+    cout << "\n";
     cout << "Please enter your character's name: ";
     cin >> cname;
+    cout << "\n";
     cout << "What is your character's gender? \n" << "M (Male), F (Female), O (Other) \n";
     cin >> temp2;
 
@@ -659,8 +799,10 @@ int main() {
             flag = false;
         }
         else {
-            cout << "Please type a letter from the above selection. (i.e. 'm' for male)";
+            cout << "Please type a letter from the above selection. (i.e. 'm' for male) \n";
         }
     }
+    cout << "\n";
     start(cname, temp, pronoun, pronoun2, pronoun3);
+    return 0;
 }
